@@ -18,12 +18,12 @@ for d in [DATA_DIR, MODELS_DIR, VOICES_DIR, DB_DIR]:
 # ── Audio ──────────────────────────────────────────────────
 SAMPLE_RATE    = 16000   
 CHANNELS       = 1       
-CHUNK_MS       = 30      
-CHUNK_SAMPLES  = int(SAMPLE_RATE * CHUNK_MS / 1000) 
+CHUNK_MS       = 32      
+CHUNK_SAMPLES  = 512 
 
 # ── Wake Word ──────────────────────────────────────────────
 WAKE_WORD_MODEL     = "hey_jarvis"   
-WAKE_WORD_THRESHOLD = 0.5            
+WAKE_WORD_THRESHOLD = 0.3            
 
 # ── VAD (Voice Activity Detection) ────────────────────────
 VAD_THRESHOLD        = 0.5   

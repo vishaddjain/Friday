@@ -64,7 +64,6 @@ def listen_for_utterance() -> np.ndarray | None:
             chunk = audio_q.get()
             prediction = wake_model.predict(chunk.flatten())
             score = prediction.get(WAKE_WORD_MODEL, 0.0)
-
             if score >= WAKE_WORD_THRESHOLD:
                 print(f"[listener] Wake word detected! (score={score:.2f})")
                 break
